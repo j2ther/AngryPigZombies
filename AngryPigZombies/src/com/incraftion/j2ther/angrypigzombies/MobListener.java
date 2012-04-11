@@ -1,20 +1,15 @@
 package com.incraftion.j2ther.angrypigzombies;
 
-import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.PigZombie;
-import org.bukkit.entity.Skeleton;
-import org.bukkit.entity.Spider;
-import org.bukkit.entity.Wolf;
-import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 
 public class MobListener implements Listener {
 	public static Main plugin;
-	public void Moblistener(Main instance) {
-		plugin = instance;
+	public void Moblistener(Main plugin) {
+		MobListener.plugin = plugin;
 	}
 	
 	@EventHandler
@@ -28,7 +23,7 @@ public class MobListener implements Listener {
 			return;
 		}
 		
-		if ((ent instanceof Zombie) || (ent instanceof Creeper) || (ent instanceof Spider) || (ent instanceof Skeleton) || (ent instanceof Wolf)) {
+		if (!(ent instanceof PigZombie)){
 			return;
 		}
 		

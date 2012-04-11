@@ -6,7 +6,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
-	public static Main Instance;
+	public static Main plugin;
 	public static final Logger log = Logger.getLogger("Minecraft");
 	public final MobListener mListener = new MobListener();
 
@@ -17,7 +17,7 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-		Instance = this;
+		plugin = this;
 		PluginDescriptionFile pdf = getDescription();
 		Main.log.info(pdf.getName() + " Version" + pdf.getVersion()	+ " is enabled!");
 		
