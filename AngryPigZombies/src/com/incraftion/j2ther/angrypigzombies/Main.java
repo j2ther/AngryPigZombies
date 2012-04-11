@@ -12,7 +12,7 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
-		Main.log.info("AngryPigZombies Disabled!");
+		Main.log.info("AngryPigZombies is disabled!");
 	}
 
 	@Override
