@@ -12,14 +12,14 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onDisable() {
-		this.log.info("AngryPigZombies is disabled!");
+		Main.log.info("AngryPigZombies is disabled!");
 	}
 
 	@Override
 	public void onEnable() {
 		plugin = this;
 		PluginDescriptionFile pdf = getDescription();
-		this.log.info(pdf.getName() + " Version" + pdf.getVersion()	+ " is enabled!");
+		Main.log.info(pdf.getName() + " Version" + pdf.getVersion()	+ " is enabled!");
 		
 		//Register Events
 		PluginManager pm = getServer().getPluginManager();
