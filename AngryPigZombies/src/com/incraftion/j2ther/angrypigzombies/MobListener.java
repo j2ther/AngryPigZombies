@@ -13,12 +13,7 @@ public class MobListener implements Listener {
 	public void Moblistener(Main plugin) {
 		MobListener.plugin = plugin;
 	}
-		
-	public void EntityTargetEvent(final Entity entity, final Player target) {
-		this.target = target;
-	}
-	
-	
+			
 	@EventHandler
 	public void onCreatureSpawn(CreatureSpawnEvent event){
 		
