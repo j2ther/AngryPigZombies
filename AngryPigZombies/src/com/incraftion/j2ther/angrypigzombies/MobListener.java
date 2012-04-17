@@ -13,7 +13,12 @@ public class MobListener implements Listener {
 	public void Moblistener(Main plugin) {
 		MobListener.plugin = plugin;
 	}
-				
+		
+	public void EntityTargetEvent(final Entity entity, final Player target) {
+		this.target = target;
+	}
+	
+	
 	@EventHandler
 	public void onCreatureSpawn(CreatureSpawnEvent event){
 		
@@ -30,10 +35,13 @@ public class MobListener implements Listener {
 			return;
 		}
 		
-		else if (ent instanceof PigZombie) {
-			PigZombie z = (PigZombie)event.getEntity();
-			z.setAngry(true);
-			z.setTarget(target);			
+		else if (ent instanceof PigZombie){
+			PigZombie pz = (PigZombie)event.getEntity();
+			pz.setAngry(true);
+					
+			if (pz.getTarget() != target){
+				pz.setTarget(target);
+			}
 		}
 		
 	}
